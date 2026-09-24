@@ -13,47 +13,28 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header_inner">
-        <a href="#home" class="logo">
-          <span class="logo-outline">TEKNIC</span>
-          <span class="logo-solid">EUCHNER</span>
-        </a>
-
-        <nav class="header_nav" aria-label="Main navigation">
-          <ul>
-            <li>
-              <a href="#home" class="nav_link is-active">HOME</a>
-            </li>
-
-            <li>
-              <a href="#about" class="nav_link"
-                >ABOUT <span class="caret">&rsaquo;</span></a
-              >
-            </li>
-
-            <li>
-              <a href="#products" class="nav_link">PRODUCTS</a>
-            </li>
-
-            <li>
-              <a href="#dealers" class="nav_link">DEALERS</a>
-            </li>
-
-            <li>
-              <a href="#events" class="nav_link">EVENTS</a>
-            </li>
-
-            <li>
-              <a href="#contact" class="nav_link">CONTACT</a>
-            </li>
-
-            <li>
-              <a href="#contact" class="nav_link nav_last"> GET IN TOUCH </a>
-            </li>
-          </ul>
-        </nav>
+    <header class="navbar">
+      <div class="logo" aria-label="Teknic Euchner">
+        <span class="teknic">TEKNIC</span>
+        <span class="euchner">EUCHNER</span>
       </div>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="#about" class="about-btn"
+              >ABOUT <span class="arrow">›</span></a
+            >
+          </li>
+          <li><a href="#products">PRODUCTS</a></li>
+          <li><a href="#deal">DEALERS</a></li>
+          <li><a href="#enginer">EVENTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" class="contact-btn">GET IN TOUCH</a>
     </header>
 
     <main>
@@ -68,7 +49,7 @@
           poster="./assets/ff21ce140248821ed61748595f9c020469feee1b.png"
           aria-hidden="true"
         >
-          <source src="./assets/video.mp4" type="video/mp4" />
+          <source src="./assets/video/video.mp4" type="video/mp4" />
         </video>
 
         <div class="hero__overlay"></div>
@@ -86,10 +67,13 @@
             </p>
 
             <div class="hero__ctas">
-              <a href="#contact" class="btn btn--ghost">
-                <span>Talk to an Expert</span>
-              </a>
+              <button class="expert-btn">
+                <svg viewBox="0 0 250 75">
+                  <path d="M1 1 H249 V57 L233 74 H1 Z"></path>
+                </svg>
 
+                <span>TALK TO AN EXPERT</span>
+              </button>
               <a href="#products" class="btn btn--red btn--large">
                 <span>Explore our products</span>
               </a>
@@ -120,7 +104,7 @@
               Experience You Can Trust.
             </h2>
 
-            <a href="#engineering" class="btn btn--red btn--small">
+            <a href="#engineering" class="btn btn--red">
               Discover Teknic Euchner
             </a>
           </aside>
@@ -175,7 +159,7 @@
         <article class="about_cards">
           <aside class="about_card">
             <div class="card_icon">
-              <img src="./assets/user-settings-01.png" alt="" />
+              <img src="./assets/images/user-settings-01.png" alt="" />
             </div>
 
             <h3>35+ Years</h3>
@@ -184,7 +168,7 @@
 
           <aside class="about_card">
             <div class="card_icon">
-              <img src="./assets/ai-co-editing.png" alt="" />
+              <img src="./assets/images/ai-co-editing.png" alt="" />
             </div>
 
             <h3>1989</h3>
@@ -193,7 +177,7 @@
 
           <aside class="about_card">
             <div class="card_icon">
-              <img src="./assets/layers-01.png" alt="" />
+              <img src="./assets/images/layers-01.png" alt="" />
             </div>
 
             <h3>Multiple Product<br />Categories</h3>
@@ -202,7 +186,7 @@
 
           <aside class="about_card">
             <div class="card_icon">
-              <img src="./assets/network.png" alt="" />
+              <img src="./assets/images/network.png" alt="" />
             </div>
 
             <h3>Pan-India<br />Dealer Network</h3>
@@ -243,7 +227,7 @@
               <h3>Inductive Proximity Switches</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image1.png"
+                  src="./assets/images/image1.png"
                   alt="Inductive Proximity Switches"
                   loading="lazy"
                 />
@@ -266,7 +250,7 @@
               <h3>Single Limit Switches</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image2.png"
+                  src="./assets/images/image2.png"
                   alt="Single Limit Switches"
                   loading="lazy"
                 />
@@ -289,7 +273,7 @@
               <h3>Precision Single & Multiple Limit Switches</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image3.png"
+                  src="./assets/images/image3.png"
                   alt="Precision Single and Multiple Limit Switches"
                   loading="lazy"
                 />
@@ -312,7 +296,7 @@
               <h3>Photoelectric Sensors</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image4.png"
+                  src="./assets/images/image4.png"
                   alt="Photoelectric Sensors"
                   loading="lazy"
                 />
@@ -335,7 +319,7 @@
               <h3>NK Limit Switches</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image5.png"
+                  src="./assets/images/image5.png"
                   alt="NK Limit Switches"
                   loading="lazy"
                 />
@@ -358,7 +342,7 @@
               <h3>Cable Connectors</h3>
               <div class="product-card__image">
                 <img
-                  src="./assets/image6.png"
+                  src="./assets/images/image6.png"
                   alt="Cable Connectors"
                   loading="lazy"
                 />
@@ -388,10 +372,10 @@
             <aside class="why__card reveal">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Built Around What Industry Needs.</h4>
+              <h5>Built Around What Industry Needs.</h5>
               <p>
                 Industrial environments leave little room for uncertainty.
                 That's why our approach combines engineering expertise, robust
@@ -403,10 +387,10 @@
             <aside class="why__card reveal d1">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Engineering Expertise</h4>
+              <h5>Engineering Expertise</h5>
               <p>
                 Built on decades of experience and strengthened by Euchner
                 Germany's engineering heritage.
@@ -416,10 +400,10 @@
             <aside class="why__card reveal d2">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Reliable Performance</h4>
+              <h5>Reliable Performance</h5>
               <p>
                 Products designed to deliver consistent operation in demanding
                 industrial environments.
@@ -429,10 +413,10 @@
             <aside class="why__card reveal">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Robust Construction</h4>
+              <h5>Robust Construction</h5>
               <p>
                 Quality materials, precision manufacturing and
                 application-focused design for long-term performance.
@@ -442,10 +426,10 @@
             <aside class="why__card reveal d1">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Industry-Focused Solutions</h4>
+              <h5>Industry-Focused Solutions</h5>
               <p>
                 Products developed around the practical requirements of
                 machines, automation systems and industrial equipment.
@@ -455,10 +439,10 @@
             <aside class="why__card reveal d2">
               <div class="why__icon">
                 <picture>
-                  <img src="./assets/webhook.png" alt="hook" />
+                  <img src="./assets/images/webhook.png" alt="hook" />
                 </picture>
               </div>
-              <h4>Quality as a Standard</h4>
+              <h5>Quality as a Standard</h5>
               <p>
                 Our commitment to quality extends from product development and
                 manufacturing to customer service.
@@ -544,7 +528,7 @@
             Confidence.
           </h1>
           <div class="intro">
-            <div class="intro-rule"></div>
+            <div class="about_line"></div>
             <p>
               Teknic Euchner brings together the engineering heritage of Euchner
               Germany with manufacturing and market expertise in India.
@@ -558,16 +542,47 @@
         </article>
 
         <article class="hero-image">
-          <picture>
+          <div class="slideshow">
             <img
-              src="./assets/image7.png"
-              alt="Close-up of industrial control terminals and wiring"
+              src="./assets/images/image7.png"
+              alt="Industrial control terminals"
+              class="slide active"
             />
-          </picture>
+
+            <img
+              src="./assets/images/image9.png"
+              alt="Industrial control terminals"
+              class="slide"
+            />
+
+            <img
+              src="./assets/images/image10.png"
+              alt="Industrial control terminals"
+              class="slide"
+            />
+
+            <img
+              src="./assets/images/image11.png"
+              alt="Industrial control terminals"
+              class="slide"
+            />
+
+            <img
+              src="./assets/images/image12.png"
+              alt="Industrial control terminals"
+              class="slide"
+            />
+
+            <img
+              src="./assets/images/image13.png"
+              alt="Industrial control terminals"
+              class="slide"
+            />
+          </div>
         </article>
 
         <div class="cta-wrap">
-          <a href="#" class="cta-button">Learn About Our Journey</a>
+          <a href="#" class="cta-button btn btn--red">Learn About Our Journey</a>
         </div>
       </section>
 
@@ -575,7 +590,7 @@
         <article class="media">
           <picture>
             <img
-              src="./assets/image8.png"
+              src="./assets/images/image8.png"
               alt="Close-up of a Teknic Euchner industrial component"
             />
           </picture>
@@ -611,9 +626,13 @@
           requirements.
         </p>
         <article class="btn-group">
-          <a href="#" class="btn btn--ghost">
-            <span>Talk to an Expert</span>
-          </a>
+          <button class="expert-btn">
+            <svg viewBox="0 0 250 75">
+              <path d="M1 1 H249 V57 L233 74 H1 Z"></path>
+            </svg>
+
+            <span>TALK TO AN EXPERT</span>
+          </button>
 
           <a href="#" class="btn btn--red btn--large">
             <span>Explore our products</span>
@@ -682,19 +701,19 @@
           <div class="social">
             <a href="#" aria-label="Facebook">
               <picture>
-                <img src="./assets/facebook.png" alt="fb" />
+                <img src="./assets/images/facebook.png" alt="fb" />
               </picture>
             </a>
 
             <a href="#" aria-label="LinkedIn">
               <picture>
-                <img src="./assets/linkedin.png" alt="linkedin" />
+                <img src="./assets/images/linkedin.png" alt="linkedin" />
               </picture>
             </a>
 
             <a href="#" aria-label="Instagram">
               <picture>
-                <img src="./assets/instagram.png" alt="instagram" />
+                <img src="./assets/images/instagram.png" alt="instagram" />
               </picture>
             </a>
           </div>

@@ -38,6 +38,13 @@ body {
   color: var(--text);
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -48,133 +55,119 @@ a {
   text-decoration: none;
 }
 
+li{
+  list-style: none;
+}
 /* ================= HEADER ================= */
 
-.header {
+.navbar {
   position: fixed;
   top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: var(--max);
-  max-width: calc(100% - 40px);
-  height: 60px;
-  background: var(--dark2);
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: 100;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-  transition:
-    top 0.3s ease,
-    background 0.3s ease;
-}
-
-.header-scrolled {
-  top: 15px;
-  background: rgba(21, 27, 32, 0.96);
-}
-
-.header_inner {
-  width: 100%;
-  height: 100%;
-  padding-left: 25px;
+  left: 200px;
+  width: 74;
+  height: 69px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  z-index: 100;
+  background: rgba(21, 27, 32, 1);
+  backdrop-filter: blur(4px);
+  padding-left: 40px;
+  transition: all 0.3s ease;
 }
-
-/* ================= LOGO ================= */
 
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 0.45rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
+  align-items: center;
+  gap: 8px;
+  width: 34%;
+  flex-shrink: 0;
   white-space: nowrap;
-  color: var(--white);
 }
 
-.logo-outline {
-  color: transparent;
-  -webkit-text-stroke: 1px #ffffff;
-  opacity: 0.85;
+.teknic {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-.logo-solid {
-  color: var(--white);
+.euchner {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/* ================= NAVIGATION ================= */
-
-.header_nav ul {
-  display: flex;
-  align-items: stretch;
-  height: 60px;
-  list-style: none;
-}
-
-.header_nav ul li {
-  display: flex;
-  align-items: stretch;
-}
-
-.nav_link {
-  position: relative;
+.nav-links {
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  border-left: 1px solid var(--bg);
-  color: var(--white);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 14px;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
   font-weight: 500;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  height: 70px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
-.nav_link:hover {
-  background: var(--red);
-  color: var(--white);
+.nav-links a:hover {
+  background-color: red;
+  width: 121.2%;
+}
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 14px 24px;
 }
 
-/* ================= CARET ================= */
-
-.caret {
+.about-btn .arrow {
   display: inline-block;
-  margin-left: 4px;
-  font-size: 1rem;
-  transition: transform 0.2s ease;
-  padding: 20px;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
 }
 
-.nav_link:hover .caret {
+.about-btn:hover .arrow {
   transform: rotate(90deg);
 }
 
-
-/* ================= GET IN TOUCH NAV ================= */
-
-.nav_last {
-  height: 100%;
-  margin-left: 12px;
-  padding: 0 24px;
+.contact-btn {
+  flex-shrink: 0;
+  width: 170px;
+  height: 69px;
+  margin-left: 20px;
   display: flex;
   align-items: center;
-  background: var(--red);
-  color: var(--white) !important;
-  clip-path: polygon(0 0,
-      100% 0,
-      100% calc(100% - var(--notch)),
-      calc(100% - var(--notch)) 100%,
-      0 100%);
-  transition: background 0.2s ease;
-}
-
-.nav_last:hover {
-  background: var(--red-hover);
+  justify-content: center;
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+    transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 14px),
+    calc(100% - 14px) 100%,
+    0 100%
+  );
 }
 
 /* ================= BUTTON ================= */
@@ -243,6 +236,39 @@ a {
 
 .btn.clicked {
   transform: scale(0.97);
+}
+
+.expert-btn {
+  width: 250px;
+  height: 60px;
+  position: relative;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.expert-btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.expert-btn path {
+  fill: none;
+  stroke: white;
+  stroke-width: 1;
+}
+
+.expert-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 /* ================= HOME / HERO ================= */
@@ -659,87 +685,82 @@ a {
 /* ================= WHY ================= */
 
 #why {
-  padding: 80px 0;
-  background: #0d0d0d;
+  width: 1440;
+  height: 718;
+  opacity: 1;
+  top: 3381px;
+  padding-top: 40px;
+  padding-right: 80px;
+  padding-bottom: 40px;
+  padding-left: 80px;
+  gap: 10px;
+  background: var(--bg);
 }
 
-#why .container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-#why .section-title {
-  margin-bottom: 48px;
+#why .container h2 {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
   color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 800;
+  text-align: left;
+
 }
 
 .why__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 24px;
+  margin-top: 48px;
 }
 
 .why__card {
-  position: relative;
-  padding: 32px;
-  background: #3a3a3a;
+  background-color: #3a3a3a;
   border-radius: 12px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-
-.why__card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.why__card.d1 {
-  transition-delay: 0.15s;
-}
-
-.why__card.d2 {
-  transition-delay: 0.3s;
+  padding: 32px;
+  position: relative;
 }
 
 .why__icon {
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--white);
-  border-radius: 50%;
 }
 
-.why__icon img,
-.why__icon svg {
+.why__icon img {
   width: 20px;
   height: 20px;
 }
 
-.why__card h4 {
-  margin: 0 0 16px;
-  padding-right: 48px;
+.why__card h5 {
+  width: 335px;
+  height: 14px;
+  font-family: "Space Grotesk";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20.16px;
   color: var(--white);
-  font-size: 1.15rem;
-  font-weight: 700;
 }
 
 .why__card p {
-  margin: 0;
-  color: #b3b3b3;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  width: 580px;
+  height: 53px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  color: var(--white);
 }
+
 
 /* ================= INDUSTRIES / SLIDE ================= */
 
@@ -837,7 +858,6 @@ a {
 
 #german .intro {
   flex: 0 1 380px;
-
   padding-top: 2px;
 }
 
@@ -853,24 +873,77 @@ a {
 }
 
 .hero-image {
+  position: relative;
   width: 100%;
-  max-width: 1280px;
-  aspect-ratio: 16 / 8.4;
-  margin: 10px auto 40px;
+  height: 500px;
   overflow: hidden;
-  background: #2a2a2a;
 }
 
-.hero-image img {
+.slideshow {
+  grid-area: image;
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+  margin-top: 20px;
+}
+
+.slideshow .slide {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  opacity: 0;
+  animation: journeyFade 12s infinite;
+}
+
+.slideshow .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slideshow .slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slideshow .slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.slideshow .slide:nth-child(4) {
+  animation-delay: 10s;
+}
+
+.slideshow .slide:nth-child(5) {
+  animation-delay: 12s;
+}
+
+
+@keyframes journeyFade {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  41% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .cta-wrap {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .cta-button {
@@ -959,6 +1032,7 @@ a {
   height: 416px;
   padding: 60px 80px;
   background: var(--black);
+  margin-top: 50px;
 }
 
 #find h1 {
